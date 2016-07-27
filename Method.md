@@ -97,18 +97,18 @@
 6-	Tree flooded, fresh water
 
 7-	Tree flooded, saline water
-
+   
     -	Steps:
   
         -	Projection in Mollweide using ArcGis (Project raster function from Data Management)
-
-        -	Change resolution at 5km using ArcGis (‘resample’ option using ‘majority ‘option) : 
+        
+        -	Change resolution at 5km using ArcGis (‘resample’ option using ‘majority‘ option) : 
         *Raster: E: /leberro/My Documents/PhD_Paper_1_globalForest/Database/ESA_GLC/ esa_glc_moll_5km_resample.tif*
-
+        
         -	Project raster to match the raster with input variables and select forested areas using GRASS rules (r.reclass) : 
         *esa_glc_transformation_reclass.py*
         *Raster: E: /leberro/My Documents/PhD_Paper_1_globalForest/Database/ESA_GLC/ esa_forest_moll5km.tif*
-
+        
         -	To select 5 km cells which have more that 50 % of forest while aggregation:
             -	Change the extent of esa_glc_moll300m to have a grid which match with our forest raster
                 -	By modifying the extent, the resolution is changed as well… So we adapt the extent to the 1km input variable (pet_season)
@@ -122,6 +122,7 @@
             -	Clip it to the current esa_glc_moll5km.tif
 
 ## II. Preprocessing – HS files preparation
+***script folder:*** *2_HS_processing* 
 
   -  inVars: set projection, resolution at 5km, NA values (see gdalinfo rast.tif ) with the script:
 script/HS_realm/ 1_HS_raster_selection/inVars_projection.py
@@ -150,9 +151,10 @@ script/HS_realm/ 1_HS_raster_selection/inVars_projection.py
 ```
 
 ## III. Postprocessing – eHab output
+***script folder:*** *3_HS_postprocessing* 
 
-postprocessing1_raster_region.py
-postprocessing2_merge_rasters.r
+*postprocessing1_raster_region.py*
+*postprocessing2_merge_rasters.r*
 
 To assess the importance of each variable:
 HS computed 12 times :
@@ -164,7 +166,8 @@ Ex:
 HS_all-aridity => HS was computed with 10 variables, aridity index was excluded
 lm (HS_all ~ HS_all-aridity) => by comparing the slope of HS computed with all variables – HS computed with one, assess the importance of the variable missing
 
-IV. Species data processing
+## IV. Species data processing
+***script folder:*** *4_Species_processing* 
 
 Data received from Graeme:
 -	12791 files: 
