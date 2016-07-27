@@ -46,7 +46,7 @@
         - Canopy height (m)
         - Soil pH for the topsoil - 0 to 5 cm
 
-      -	Variable selection (11):
+      -	Variable selected (11):
     
         - tseason: Temperature seasonality
         - tmax_warm_mt: Temperature max of the warmest month
