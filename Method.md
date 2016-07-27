@@ -132,7 +132,7 @@ script/HS_realm/ 1_HS_raster_selection/inVars_projection.py
 
 ```
 > python 
->> from subpas_loop import *
+>>> from subpas_loop import *
 ```
 
 
