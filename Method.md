@@ -207,9 +207,7 @@ esh_spnum_123  : length(list_123) # 668 sp
 
 **Data treatment:**
 
-Method:
-
-Number of small range species map:
+Method to have the number of small range species map:
 
 1.	Project _1.tif and _2.tif species in moll, resolution 5 km: *ArcGIS using Iterator, see birds_breeding_range.r*
 2.	Change resolution in 100 km : *bird_rast_01.py*
