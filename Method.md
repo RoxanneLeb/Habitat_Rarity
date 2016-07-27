@@ -60,7 +60,7 @@
         -	soil: soil pH
         -	slope
 
-2. Realm selection:
+### 2. Realm selection:
 
   Extract realm ArcGis by using dissolve (merge different polygons in one, e.g.ecoregions).
   
@@ -78,7 +78,7 @@
 
     Projection in Mollweide using ArcGis (Project raster function from Data Management)
 
-3. Forest class selection: 
+### 3. Forest class selection: 
 
 *From http://www.esa-landcover-cci.org/*
 
@@ -99,6 +99,7 @@
 7-	Tree flooded, saline water
 
     -	Steps:
+  
         -	Projection in Mollweide using ArcGis (Project raster function from Data Management)
 
         -	Change resolution at 5km using ArcGis (‘resample’ option using ‘majority ‘option) : 
@@ -120,26 +121,35 @@
             -	Create a raster map of 5km from this selection
             -	Clip it to the current esa_glc_moll5km.tif
 
-II. Preprocessing – HS files preparation
+## II. Preprocessing – HS files preparation
 
--	inVars: set projection, resolution at 5km, NA values (see gdalinfo rast.tif ) with the script:
+  -  inVars: set projection, resolution at 5km, NA values (see gdalinfo rast.tif ) with the script:
 script/HS_realm/ 1_HS_raster_selection/inVars_projection.py
 
--	Pas = ecoregions: each forested realms: Cox_Olson_realm_forest.shp
--	Run pas: 
+  -  Pas = ecoregions: each forested realms: Cox_Olson_realm_forest.shp
+  -  Run pas: 
+
+```
 > python 
->>> from subpas_loop import *
+>> from subpas_loop import *
+```
 
--	Ecoregion = pas: world forests raster: Forest 1 / no Forest 0
-o	Copy/paste of the pas output from subpas_loop.py => pa_1 => eco_555
-o	To reproject the pas files: 
-Script: script/HS_realm/realm_forested_raster.r
--	Run ehab:
-> python
->>> from ehab_realm import *
->>> ehabitat(‘555’,’’,’’)
 
-III. Postprocessing – eHab output
+  -	Ecoregion = pas: world forests raster: Forest 1 / no Forest 0
+    -	Copy/paste of the pas output from subpas_loop.py => pa_1 => eco_555
+    -	To reproject the pas files: 
+    
+    *realm_forested_raster.r*
+
+  -	Run ehab:
+
+```
+    > python
+    >>> from ehab_realm import *
+    >>> ehabitat(‘555’,’’,’’)
+```
+
+## III. Postprocessing – eHab output
 
 postprocessing1_raster_region.py
 postprocessing2_merge_rasters.r
