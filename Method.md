@@ -157,31 +157,46 @@ script/HS_realm/ 1_HS_raster_selection/inVars_projection.py
 *postprocessing2_merge_rasters.r*
 
 To assess the importance of each variable:
+
 HS computed 12 times :
+
 1.	1 for HS_all = computed with all variables (11)
+
 2.	11 for HS_all-1var = computed with 10 variables => 11 variables – 1 variable, the variable we want to assess the importance in the HS computation
+
 3.	 Performing linear regressions with lm( HS_all ~ HS_all-1var)
-Script: regression_importance_variables.r
+*regression_importance_variables.r*
+
 Ex:  
+
 HS_all-aridity => HS was computed with 10 variables, aridity index was excluded
+
 lm (HS_all ~ HS_all-aridity) => by comparing the slope of HS computed with all variables – HS computed with one, assess the importance of the variable missing
 
 ## IV. Species data processing
 ***script folder:*** *4_Species_processing* 
 
 Data received from Graeme:
+
 -	12791 files: 
-o	esh_spnum_1 : resident birds 
-o	esh_spnum_2 : breeding area for migrant
-o	esh_spnum_3 : non breeding area for migrant
-nb: some sp are also _12, _13, _23, _123
+
+    -	esh_spnum_1 : resident birds 
+    -	esh_spnum_2 : breeding area for migrant
+    -	esh_spnum_3 : non breeding area for migrant
+        nb: some sp are also _12, _13, _23, _123
 
 esh_spnum_1 : length(list_1) # 9679 sp => 8366 sp (without _12.tif, _13.tif, _123.tif) => 9679-293-352-668 = 8366
+
 esh_spnum_2  : length(list_2) # 1530 sp => 10 sp (without _23.tif, _123.tif) => 1530-352-668 = 10
+
 esh_spnum_3 : length(list_3) # 1582 sp => 3 sp (without _13.tif, _23.tif, _123.tif) => 1582-352-668 = 3 => error for these species without breeding range
+
 esh_spnum_12  : length(list_12) # 293 sp => species with populations which are partially migrants, sp with both resident range and breeding range for migrants pop.
+
 esh_spnum_13  : length(list_13) # 352 sp 
+
 esh_spnum_23  : length(list_23) # 559 sp 
+
 esh_spnum_123  : length(list_123) # 668 sp 
 
 -	resolution: 5km
@@ -189,7 +204,9 @@ esh_spnum_123  : length(list_123) # 668 sp
 -	values from 0 to 1 reflecting probability of occurrence
 
 Data treatment:
-Method:
+
+**Method:**
+
 Number of small range species map:
 1.	Project _1.tif and _2.tif species in moll, resolution 5 km: ArcGIS using Iterator, see birds_breeding_range.r
  
