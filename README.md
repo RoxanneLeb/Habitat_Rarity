@@ -9,8 +9,8 @@ Script used to compute the Habitat Similarity metric (HS), process species data 
 
 Method used discribed in **Method.md**
 
-\- .r : script using mainly R language
+\- .r : script uses mainly R language
 
-\- .py : script using mainly GRASS
+\- .py : script uses mainly GRASS / python
 
 \- .txt : files used in the .r or .py scripts to sort data or execute command
