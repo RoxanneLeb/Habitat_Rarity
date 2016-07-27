@@ -176,7 +176,8 @@ lm (HS_all ~ HS_all-aridity) => by comparing the slope of HS computed with all v
 ## IV. Species data processing
 ***script folder:*** *4_Species_processing* 
 
-Data received from Graeme:
+
+**Data received from Graeme:**
 
 -	12791 files: 
 
@@ -202,6 +203,7 @@ esh_spnum_123  : length(list_123) # 668 sp
 -	resolution: 5km
 
 -	values from 0 to 1 reflecting probability of occurrence
+
 
 **Data treatment:**
 
