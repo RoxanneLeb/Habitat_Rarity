@@ -81,6 +81,7 @@
 3. Forest class selection: 
 
 *From http://www.esa-landcover-cci.org/*
+
 *See E:/leberro/My Documents/PhD_Paper_1_globalForest/Database/ESA_GLC/ESACCI-LC-Legend.xls*
 
 1-	Tree broadleaved evergreen
