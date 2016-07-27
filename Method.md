@@ -210,13 +210,22 @@ esh_spnum_123  : length(list_123) # 668 sp
 Method to have the number of small range species map:
 
 1.	Project _1.tif and _2.tif species in moll, resolution 5 km: *ArcGIS using Iterator, see birds_breeding_range.r*
+
 2.	Change resolution in 100 km : *bird_rast_01.py*
+
 3.	Select forest species (>= 1/3rd of their breeding range in forest): *birds_breeding_range.r*
+
 4.	Merge the breeding areas with non-breeding areas of the selected forest species at 5km resolution to have the whole species _1.tif, _2.tif, _3.tif => _1.tif, _2.tif, _12.tif, _13.tif, _123.tif : *sp_assemblage.r*
+
 5.	Project and change the resolution at 100km for these raster files: *ArcGIS using Iterator (see birds_breeding_range.r) and bird_rast_01.py*
+
 6.	Select small range size species => first quantile, compare with nb species <= 50 000km2 : *birds_breeding_range.r*
+
 7.	Change values in 0/1 (binary) of the selected forest species (all ranges, small and big): *bird_rast_01.py*
+
 8.	Sum the rasters of restricted range species (first quantile and/or 50 000km2)
+
 9.	Sum the rasters of all forest species
+
 10.	Produce the map: [nb restricted range sp]/[forest sp nb]
 
