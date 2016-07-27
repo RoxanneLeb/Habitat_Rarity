@@ -98,28 +98,28 @@
 
 7-	Tree flooded, saline water
    
-    -	Steps:
+ Steps:
   
-        -	Projection in Mollweide using ArcGis (Project raster function from Data Management)
+    -	Projection in Mollweide using ArcGis (Project raster function from Data Management)
         
-        -	Change resolution at 5km using ArcGis (‘resample’ option using ‘majority‘ option) : 
+    -	Change resolution at 5km using ArcGis (‘resample’ option using ‘majority‘ option) : 
         *Raster: E: /leberro/My Documents/PhD_Paper_1_globalForest/Database/ESA_GLC/ esa_glc_moll_5km_resample.tif*
         
-        -	Project raster to match the raster with input variables and select forested areas using GRASS rules (r.reclass) : 
+    -	Project raster to match the raster with input variables and select forested areas using GRASS rules (r.reclass) : 
         *esa_glc_transformation_reclass.py*
         *Raster: E: /leberro/My Documents/PhD_Paper_1_globalForest/Database/ESA_GLC/ esa_forest_moll5km.tif*
         
-        -	To select 5 km cells which have more that 50 % of forest while aggregation:
-            -	Change the extent of esa_glc_moll300m to have a grid which match with our forest raster
-                -	By modifying the extent, the resolution is changed as well… So we adapt the extent to the 1km input variable (pet_season)
-                -	GGIS: Raster -> Raster calculator, load eas_glc_moll300m and eas_forest_moll5km. Enter esa_glc_moll300m@1, then click on esa_forest_moll5km@1 raster in Raster bands to highlight it and click on Current layer extent button. 
-            -	GRASS: Reclassify all 7 forests categories as forest
-                Script:
-            -	Create a grid based on 5 km resolution raster esa_forest_moll5km.tif (or input variable)
-            - 	Overlap the grid of 5km on the raster esa_forest_moll5km.tif 
-            -	Select the 5km cells which have more than 50 % tree cover (from class 50 to 90) : aggregate the 0-1 map created further by 5 using sum
-            -	Create a raster map of 5km from this selection
-            -	Clip it to the current esa_glc_moll5km.tif
+    -	To select 5 km cells which have more that 50 % of forest while aggregation:
+        -	Change the extent of esa_glc_moll300m to have a grid which match with our forest raster
+            -	By modifying the extent, the resolution is changed as well… So we adapt the extent to the 1km input variable (pet_season)
+            -	GGIS: Raster -> Raster calculator, load eas_glc_moll300m and eas_forest_moll5km. Enter esa_glc_moll300m@1, then click on esa_forest_moll5km@1 raster in Raster bands to highlight it and click on Current layer extent button. 
+        -	GRASS: Reclassify all 7 forests categories as forest
+            Script:
+        -	Create a grid based on 5 km resolution raster esa_forest_moll5km.tif (or input variable)
+        - 	Overlap the grid of 5km on the raster esa_forest_moll5km.tif 
+        -	Select the 5km cells which have more than 50 % tree cover (from class 50 to 90) : aggregate the 0-1 map created further by 5 using sum
+        -	Create a raster map of 5km from this selection
+        -	Clip it to the current esa_glc_moll5km.tif
 
 ## II. Preprocessing – HS files preparation
 ***script folder:*** *2_HS_processing* 
