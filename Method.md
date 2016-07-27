@@ -7,19 +7,20 @@
 
 1.	Transformation :
 
-    - Projection on Mollweide using ArcGis because ESRI extension for Aridity index and Global PET Monthly
+    1. Projection on Mollweide using ArcGis because ESRI extension for Aridity index and Global PET Monthly
       - ‘Project raster’ function from Data Management
 
-    - Aggregation from 1 to 5 km resolution using GRASS (see section II) 
+    2. Aggregation from 1 to 5 km resolution using GRASS (see section II) 
     
       *inVars_projection.py*
       
-    - Aggregation from 1 to 5 km resolution using R  to have the forest cover for correlation analysis
+    3. Aggregation from 1 to 5 km resolution using R  to have the forest cover for correlation analysis
     
       *variable_res_change.r*
 
 2.	Variables analysis:
-    - Correlation analysis
+
+    1. Correlation analysis
     
      *variables_cor.R*
 
@@ -63,11 +64,11 @@
 
   Extract realm ArcGis by using dissolve (merge different polygons in one, e.g.ecoregions).
   
-  -	Mix between Cox and Olson map, using Olson boundaries as Cox digital version doesn’t exist:
+  1.	Mix between Cox and Olson map, using Olson boundaries as Cox digital version doesn’t exist:
     -	Add a column in the attribute of the vector files (edit)
     -	Dissolve the realms
 
-  -	Creation of 6 realms:
+  2.	Creation of 6 realms:
       1.	Neartic (Olson)
       2.	Paleartic (Olson)
       3.	South American (Cox)
@@ -75,7 +76,7 @@
       5.	Indo-Pacific (Cox) => West delimitation around Himalaya according to forest class
       6.	Australian (Cox)
 
--	Projection in Mollweide using ArcGis (Project raster function from Data Management)
+        3. Projection in Mollweide using ArcGis (Project raster function from Data Management)
 
 3. Forest class selection: 
 
