@@ -188,11 +188,11 @@ lm (HS_all ~ HS_all-aridity) => by comparing the slope of HS computed with all v
 
 - 12791 files: 
 
-	esh_spnum_1 : resident birds 
+	1. esh_spnum_1 : resident birds 
 	
-	esh_spnum_2 : breeding area for migrant
+	2. esh_spnum_2 : breeding area for migrant
 	
-	esh_spnum_3 : non breeding area for migrant
+	3. esh_spnum_3 : non breeding area for migrant
 	
     *nb: some sp are also _12, _13, _23, _123*
         
@@ -219,15 +219,15 @@ lm (HS_all ~ HS_all-aridity) => by comparing the slope of HS computed with all v
 
     *8718+569+961 = 10 248 sp*
 
-* esh_spnum_13  : length(list_13) # 352 sp 
+    * esh_spnum_13  : length(list_13) # 352 sp 
 
-* esh_spnum_23  : length(list_23) # 559 sp 
+    * esh_spnum_23  : length(list_23) # 559 sp 
 
-    - esh_spnum_123  : length(list_123) # 668 sp 
+    * esh_spnum_123  : length(list_123) # 668 sp 
+    
+- resolution: 5km
 
-    -	resolution: 5km
-
-    -	values from 0 to 1 reflecting probability of occurrence
+- values from 0 to 1 reflecting probability of occurrence
 
 
 **Data treatment:**
