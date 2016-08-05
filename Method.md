@@ -194,17 +194,23 @@ lm (HS_all ~ HS_all-aridity) => by comparing the slope of HS computed with all v
         nb: some sp are also _12, _13, _23, _123
 
 esh_spnum_1 : length(list_1) # 9679 sp 
+
 => 8366 sp (without _12.tif, _13.tif, _123.tif) => 9679-293-352-668 
+
 => 8718 sp (without _12.tif, _123.tif) => 9679-293-668 # no _3.tif => we remove the _3 category from the database: just cat _1.tif, _2.tif, _12.tif
 
 esh_spnum_2  : length(list_2) # 1530 sp
+
 => 10 sp (without _23.tif, _123.tif) => 1530-352-668
+
 => 569 sp (without _12.tif, _123.tif) 1530-293-668 # no _3.tif
 
 esh_spnum_3 : length(list_3) # 1582 sp 
-=> 3 sp (without _13.tif, _23.tif, _123.tif) => 1582-352-668 = 3 => error for these species without breeding range
+
+=> 3 sp (without _13.tif, _23.tif, _123.tif) => 1582-352-668 = 3, error for these species without breeding range
 
 esh_spnum_12  : length(list_12) # 293 sp : species with populations which are partially migrants, sp with both resident range and breeding range for migrants pop.
+
 => 	961 (_12.tif+_123.tif) => 293+668 # no _3.tif
 
 *8718+569+961 = 10 248 sp*
