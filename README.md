@@ -5,7 +5,7 @@ Script used to compute the Habitat Similarity metric (HS), process species data 
 
 - **HS computation:** 1_HS_raster_selection, 3_HS_postprocessing, 3_HS_postprocessing
 - **Species processing:** 4_Species_processing
-- **Statistical analysis:** 5_
+- **Statistical analysis:** 5_Statistical_analysis
 
 Method used discribed in **Method.md**
 
