@@ -1,4 +1,4 @@
-# Paper1_global_forest
+# Habitat_Rarity
 Script used to compute the Habitat Similarity metric (HS), process species data and statistical analysis.
 
 **Composed of five folders:**
